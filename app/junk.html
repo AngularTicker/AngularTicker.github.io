@@ -1,0 +1,44 @@
+<svg height="25" width="70">
+    <polyline points="0,25,0,15,5,14,10,13,15,13,20,12,25,12,30,12,35,12,40,13,45,14,50,12,55,12,60,12,65,11,70,11,70,25" 
+    style="fill:#737373;stroke:black;stroke-width:0"></polyline>
+    <polyline points="0,15,5,14,10,13,15,13,20,12,25,12,30,12,35,12,40,13,45,14,50,12,55,12,60,12,65,11,70,11" 
+    style="fill:none;stroke:#8A8A8A;stroke-width:2"></polyline>
+</svg>
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <stock-price [oilPrice]="oilPrices[0]"></stock-price>
+        <stock-price [oilPrice]="oilPrices[1]"></stock-price>
+        <stock-price [oilPrice]="oilPrices[2]"></stock-price>
+      </div>
+
+      <div class="item">
+        <stock-price [oilPrice]="oilPrices[3]"></stock-price>
+        <stock-price [oilPrice]="oilPrices[4]"></stock-price>
+        <stock-price [oilPrice]="oilPrices[5]"></stock-price>
+      </div>
+    
+      <div class="item">
+        <stock-price [oilPrice]="oilPrices[6]"></stock-price>
+        <stock-price [oilPrice]="oilPrices[7]"></stock-price>
+        <stock-price [oilPrice]="oilPrices[8]"></stock-price>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+

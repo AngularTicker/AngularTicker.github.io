@@ -1,0 +1,48 @@
+<div class="oil-price">
+    <svg height="60" width="10" class="division">
+        <line x1="5" y1="20" x2="5" y2="50" style="stroke:#666666;stroke-width:2" />
+    </svg>
+
+    <span class="name">{{oilPrice.name}}</span>
+    <span class="price">{{oilPrice.price}}
+        <span class="arrow" *ngIf="isChangePositive()">
+            <svg height="8" width="10">
+                <polygon points="0,8,5,0,10,8" style="fill:lime;stroke:line;stroke-width:1" />
+            </svg>
+        </span>
+        <span class="arrow" *ngIf="!isChangePositive()">
+            <svg height="8" width="10">
+                <polygon points="0,0,5,8,10,0" style="fill:red;stroke:red;stroke-width:1" />
+            </svg>
+        </span>
+    </span>
+    <span class="change" [style.color]="isChangePositive() ? 'lime' : 'red'">
+        <span *ngIf="isChangePositive()">+</span>{{change}}
+    </span>
+    <span class="percent" [style.color]="isChangePositive() ? 'lime' : 'red'">
+        <span *ngIf="isChangePositive()">+</span>{{percent}}%
+    </span>
+
+    <svg height="25" width="70" class="spark-line">
+        <polyline [attr.points]="getPriceHistoryString(true)"
+                  style="fill:#737373;stroke:#999999;stroke-width:0"></polyline>
+        <polyline [attr.points]="getPriceHistoryString(false)" 
+                  style="fill:none;stroke:#a4a4a4;stroke-width:2"></polyline>
+    </svg>
+</div>
+
+<!--<div>
+    <p>{{min}}</p>
+    <p>{{max}}</p>
+    <p>{{variance}}</p>
+    <p>{{variancePercent}}</p>
+    <p>{{sparklineVariance}}</p>
+    <p>{{topMargin}}</p>
+    <p>{{bottomMargin}}</p>
+    <p>{{oilPrice.history}}</p>
+    <p>{{historySvg}}</p>
+</div>
+
+<div>
+    <p>{{priceHistoryString}}</p>
+</div>-->

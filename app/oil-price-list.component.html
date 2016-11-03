@@ -1,0 +1,32 @@
+    <div width="780px" style="background-color:#333333;" >
+        <carousel  width="780px" [interval]="myInterval" [noWrap]="noWrapSlides">
+            <slide *ngFor="let op of oilPrices; let index=index"
+                    [active]="op.active">
+                    <p style="text-align:center;">
+                    <oil-price [oilPrice]=oilPrices[index]></oil-price>
+                    <span *ngIf="(index+1)<oilPrices.length"><oil-price [oilPrice]=oilPrices[index+1]></oil-price></span>
+                    <span *ngIf="(index+1)>=oilPrices.length"><oil-price [oilPrice]=oilPrices[index+1-oilPrices.length]></oil-price></span>
+                    <span *ngIf="(index+2)<oilPrices.length"><oil-price [oilPrice]=oilPrices[index+2]></oil-price></span>
+                    <span *ngIf="(index+2)>=oilPrices.length"><oil-price [oilPrice]=oilPrices[index+2-oilPrices.length]></oil-price></span>
+                    </p>
+            </slide>
+        </carousel>
+    </div>
+
+    <br/>
+    <br/>
+
+    <marquee width="780px" style="background-color:#333333;">
+        <div *ngFor="let op of oilPrices" [@myTrigger]="state" class="oil-price-list">
+                <oil-price [oilPrice]=op></oil-price>
+        </div>
+        <div *ngFor="let op of oilPrices" [@myTrigger]="state" class="oil-price-list">
+                <oil-price [oilPrice]=op></oil-price>
+        </div>
+
+    </marquee>
+
+
+
+
+

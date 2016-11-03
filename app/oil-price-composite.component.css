@@ -1,0 +1,53 @@
+.oil-price-composite{
+    background-color: #333333 !important;
+    font-family: Arial, sans-serif;
+    font-size: 8.5pt;
+    /*font-weight: bold;*/
+    color: #ffffff;
+    display: inline-block;
+    width: 230px;
+    height: 60px;
+    position: relative;
+}
+.red{
+    left: 44px;    
+    color: #cc2244;
+    ;
+}
+p{
+    left: 12px;    
+    color: #228844;
+    ;
+}
+.name{
+    position: absolute;
+    left: 20px;
+    top: 17px;
+}
+.price{
+    position: absolute;
+    left: 20px;
+    top: 35px;
+}
+.arrow{
+    position: relative;
+    bottom: 0px;
+}
+.change{
+    position: absolute;
+    left: 90px;
+    top: 17px;
+    /*color: #228844;*/
+}
+.percent{
+    position: absolute;
+    left: 90px;
+    top: 35px;
+    /*color: #cc2244;*/
+}
+
+.spark-line{
+    position: absolute;
+    left: 150px;
+    top: 20px;
+}
